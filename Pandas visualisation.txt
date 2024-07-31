@@ -1,0 +1,34 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+df = pd.read_csv(r"C:\Users\amrit\OneDrive\Documents\Web Scrapping\Ice Cream Ratings.csv")
+
+df = df.set_index('Date')
+df
+
+
+
+
+
+df
+
+print(plt.style.available)
+plt.style.use('Solarize_Light2')
+
+df.plot(kind = 'line',title="Ice Cream Rating", xlabel='Day', ylabel = 'Rating')
+
+df.plot.barh(stacked = True, figsize = (10,5))
+
+df.plot.scatter(x = 'Flavor Rating', y= 'Texture Rating', s = 300, c = 'Green')
+
+df.plot.hist(bins = 50)
+
+
+
+df.boxplot()
+
+df.plot.area()
+
+df.plot.pie(y='Texture Rating', figsize = (5,10))
+
